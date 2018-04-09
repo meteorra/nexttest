@@ -1,5 +1,5 @@
 {
-    "name": "next-test",
+    "name": "test",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -11,7 +11,7 @@
         "precommit": "lint-staged"
     },
     "lint-staged": {
-        "*.{js,json,css,md}": ["eslint --fix", "git add"]
+        "*.{js,jsx}": ["eslint --fix", "git add"]
     },
     "author": "",
     "license": "ISC",
