@@ -7,11 +7,20 @@
         "dev": "next",
         "build": "next build",
         "start": "next start",
-        "lint": "eslint --fix .",
+        "lint": "npm run lint:js && npm run lint:style",
+        "lint:js": "eslint --fix .",
+        "lint:style": "stylelint --fix \"./**/*.scss\"",
         "precommit": "lint-staged"
     },
     "lint-staged": {
-        "*.{js,jsx}": ["eslint --fix", "git add"]
+        "*.{js,jsx}": [
+            "eslint --fix",
+            "git add"
+        ],
+        "*.{scss}": [
+            "stylelint --fix \"./**/*.scss\"",
+            "git add"
+        ]
     },
     "author": "",
     "license": "ISC",
@@ -38,6 +47,10 @@
         "husky": "^0.14.3",
         "lint-staged": "^7.0.4",
         "postcss-scss": "^1.0.5",
-        "prettier": "^1.11.1"
+        "prettier": "^1.11.1",
+        "prettier-stylelint": "^0.4.2",
+        "stylelint": "^9.2.0",
+        "stylelint-config-standard": "^18.2.0",
+        "stylelint-webpack-plugin": "^0.10.4"
     }
 }
