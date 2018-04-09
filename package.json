@@ -1,0 +1,43 @@
+{
+    "name": "next-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint --fix .",
+        "precommit": "lint-staged"
+    },
+    "lint-staged": {
+        ".": ["eslint --fix", "git add"]
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@zeit/next-sass": "^0.1.2",
+        "autoprefixer": "^8.2.0",
+        "babel-plugin-react-css-modules": "^3.3.3",
+        "cssnano": "^3.10.0",
+        "next": "^5.1.0",
+        "node-sass": "^4.8.3",
+        "postcss-easy-import": "^3.0.0",
+        "react": "^16.3.1",
+        "react-dom": "^16.3.1"
+    },
+    "devDependencies": {
+        "babel-eslint": "^8.2.2",
+        "babel-preset-env": "^1.6.1",
+        "eslint": "^4.19.1",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-import": "^2.10.0",
+        "eslint-plugin-jsx-a11y": "^6.0.3",
+        "eslint-plugin-prettier": "^2.6.0",
+        "eslint-plugin-react": "^7.7.0",
+        "husky": "^0.14.3",
+        "lint-staged": "^7.0.4",
+        "postcss-scss": "^1.0.5",
+        "prettier": "^1.11.1"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "presets": [
+        "next/babel",
+        [
+            "env",
+            {
+                "targets": {
+                    "browsers": [
+                        "last 2 versions"
+                    ]
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "react-css-modules",
+            {
+                "filetypes": {
+                    ".scss": {
+                        "syntax": "postcss-scss"
+                    }
+                }
+            }
+        ]
+    ]
+}
