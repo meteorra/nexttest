@@ -1,6 +1,8 @@
 const withSass = require('@zeit/next-sass');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
+const debug = process.env.NODE_ENV !== 'production';
+
 module.exports = withSass({
     cssModules: true,
     cssLoaderOptions: {
@@ -11,7 +13,12 @@ module.exports = withSass({
         if (dev) {
             config.plugins.push(new StyleLintPlugin());
         }
-
         return config;
     },
+    exportPathMap() {
+        return {
+            '/': { page: '/' },
+        };
+    },
+    assetPrefix: !debug ? '/nextapp/' : '',
 });

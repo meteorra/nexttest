@@ -1,22 +1,17 @@
 const postcssEasyImport = require('postcss-easy-import');
 const autoPrefixer = require('autoprefixer');
-const cssNano = require('cssnano');
+const postcssUtilities = require('postcss-utilities');
+const postcssShort = require('postcss-short');
+const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
 
 module.exports = {
     plugins: [
-        postcssEasyImport({ prefix: '_' }), // keep this first
+        postcssEasyImport({ prefix: '_' }),
         autoPrefixer({
-            /* ...options */
-        }), // so imports are auto-prefixed too
-        cssNano({
-            preset: [
-                'default',
-                {
-                    discardComments: {
-                        removeAll: true,
-                    },
-                },
-            ],
+            browsers: ['last 2 versions', '> 2%'],
         }),
+        postcssUtilities(),
+        postcssShort(),
+        postcssFlexbugsFixes(),
     ],
 };
