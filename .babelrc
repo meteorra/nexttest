@@ -3,14 +3,11 @@
         "next/babel"
     ],
     "plugins": [
-        [
-            "react-css-modules",
+        ["babel-plugin-styled-components",
             {
-                "filetypes": {
-                    ".scss": {
-                        "syntax": "postcss-scss"
-                    }
-                }
+                "ssr": true,
+                "displayName": true,
+                "preprocess": false
             }
         ]
     ]

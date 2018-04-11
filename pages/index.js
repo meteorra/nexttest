@@ -1,13 +1,10 @@
 import React from 'react';
+import Content from './style';
 
-import './styles.scss';
-
-const test = [1, 2, 3];
-
-const Page = (props) => (
-    <div styleName="test">
+const Page = () => (
+    <Content>
         Welcome bbb tongggggggggg gggggggggggggggggggg ggggggggggggggggggggggggggggggext.js!!!!
-    </div>
+    </Content>
 );
 
 export default Page;
