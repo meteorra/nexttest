@@ -6,7 +6,7 @@ const { Foo } = components;
 
 const Base = () => (
     <div>
-        <div className="page-div index-page">initial page tag</div>
+        <div className="page-div index-page">initial page</div>
         <Foo />
     </div>
 );
