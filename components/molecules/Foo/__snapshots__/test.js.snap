@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Foo should correspond to the initial template 1`] = `
+<div
+  className="Foo"
+>
+  <p
+    className="sc-bdVaJa izxjOo"
+  >
+    Foo component first paragraph
+  </p>
+  <p
+    className="sc-bdVaJa izxjOo"
+  >
+    Foo component second paragraph
+  </p>
+</div>
+`;

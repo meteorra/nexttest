@@ -1,0 +1,26 @@
+{
+    "verbose": true,
+    "setupFiles": ["<rootDir>/jest.setup.js"],
+    "testPathIgnorePatterns": [
+        "<rootDir>/(node_modules)",
+        "<rootDir>/(.next)",
+        "<rootDir>/(out)",
+        "<rootDir>/(coverage)"
+    ],
+    "moduleFileExtensions": [
+        "js",
+        "jsx"
+    ],
+    "transform": {
+        "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom" : [
+        "**/*.{js,jsx}",
+        "!**/coverage/**",
+        "!**/node_modules/**",
+        "!**/.next/**",
+        "!**/out/**"
+    ],
+    "coverageDirectory": "coverage"
+}

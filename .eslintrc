@@ -15,12 +15,18 @@
     },
     "env": {
         "node": true,
-        "browser": true
+        "browser": true,
+        "jest": true
     },
     "plugins": [
         "react",
         "prettier"
     ],
+    "settings": {
+        "import/resolver": {
+            "babel-module": {}
+        }
+    },
     "rules": {
         "react/jsx-filename-extension": [
             1,
@@ -28,6 +34,15 @@
                 "extensions": [
                     ".js",
                     ".jsx"
+                ]
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            2,
+            {
+                "devDependencies": [
+                    "**/test.js",
+                    "jest.setup.js"
                 ]
             }
         ],

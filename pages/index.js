@@ -1,10 +1,9 @@
 import React from 'react';
-import Content from './style';
 
-const Page = () => (
-    <Content>
-        Welcome bbb tongggggggggg gggggggggggggggggggg ggggggggggggggggggggggggggggggext.js!!!!
-    </Content>
-);
+import templates from 'templates';
+
+const { Base } = templates;
+
+const Page = () => <Base />;
 
 export default Page;

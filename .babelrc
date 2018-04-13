@@ -1,8 +1,15 @@
 {
-    "presets": [
-        "next/babel"
-    ],
     "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": ["./"],
+                "alias": {
+                    "components": "./components",
+                    "templates": "./templates"
+                }
+            }
+        ],
         ["babel-plugin-styled-components",
             {
                 "ssr": true,
@@ -10,5 +17,11 @@
                 "preprocess": false
             }
         ]
-    ]
+    ],
+    "presets": ["next/babel"],
+    "env": {
+        "test": {
+            "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]]
+        }
+    }
 }
